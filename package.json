@@ -1,0 +1,31 @@
+{
+  "name": "epubtest-db-api",
+  "version": "1.0.0",
+  "description": "Database API server for epubtest.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daisy/epubtest-db-api"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node makeCache.js && node index.js"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Marisa DeMeglio",
+    "email": "marisa.demeglio@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@graphile-contrib/pg-order-by-related": "^1.0.0-beta.6",
+    "@graphile-contrib/pg-simplify-inflector": "^5.0.0-beta.1",
+    "aws-serverless-express": "^3.3.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^7.9.0",
+    "postgraphile": "^4.4.4",
+    "postgraphile-plugin-connection-filter": "^1.1.3"
+  }
+}
