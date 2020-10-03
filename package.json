@@ -9,9 +9,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node makeCache.js && node index.js",
-    "makeCache": "node makeCache.js",
-    "startApi": "node index.js"
+    "start": "./node_modules/.bin/cross-env NODE_ENV=production node makeCache.js && ./node_modules/.bin/cross-env NODE_ENV=production node index.js",
+    "makeCache": "./node_modules/.bin/cross-env NODE_ENV=production node makeCache.js",
+    "startApi": "./node_modules/.bin/cross-env NODE_ENV=production node index.js",
+    "dev": "./node_modules/.bin/cross-env NODE_ENV=development node makeCache.js && ./node_modules/.bin/cross-env NODE_ENV=development node index.js",
+    "makeCache-dev": "./node_modules/.bin/cross-env NODE_ENV=development node makeCache.js",
+    "startApi-dev": "./node_modules/.bin/cross-env NODE_ENV=development node index.js"
   },
   "keywords": [],
   "author": {
@@ -28,5 +31,8 @@
     "pg": "^8.2.1",
     "postgraphile": "^4.7.0",
     "postgraphile-plugin-connection-filter": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
   }
 }

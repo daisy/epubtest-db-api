@@ -2,7 +2,9 @@ const path = require('path');
 const envFile = process.argv.length > 2 ? 
     process.argv[2] : ".env";
 const envpath = path.resolve(__dirname, envFile);
-require('dotenv').config({path: envpath});
+if (process.env.NODE_ENV != 'production') {
+    require('dotenv').config({path: envpath});
+}
 
 const express = require('express')
 const { postgraphile } = require("postgraphile");
