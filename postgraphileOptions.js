@@ -14,5 +14,6 @@ exports.options = {
   jwtPgTypeIdentifier: process.env.JWT_PG_TYPE_IDENTIFIER || 'epubtest.jwt_token',
   ignoreRBAC: false,
   appendPlugins: [PgSimplifyInflectorPlugin, PgFilterPlugin, PgOrderByPlugin],
-  simpleCollections: "both"
+  simpleCollections: "both",
+  graphileBuildOptions: {pgOmitListSuffix: true}
 };

@@ -14,7 +14,8 @@
     "startApi": "node index.js",
     "dev": "./node_modules/.bin/cross-env NODE_ENV=development node makeCache.js && ./node_modules/.bin/cross-env NODE_ENV=development node index.js",
     "makeCache-dev": "./node_modules/.bin/cross-env NODE_ENV=development node makeCache.js",
-    "startApi-dev": "./node_modules/.bin/cross-env NODE_ENV=development node index.js"
+    "startApi-dev": "./node_modules/.bin/cross-env NODE_ENV=development node index.js",
+    "export-schema": "./node_modules/.bin/postgraphile -X --export-schema-json epubtest-schema.json"
   },
   "keywords": [],
   "author": {
